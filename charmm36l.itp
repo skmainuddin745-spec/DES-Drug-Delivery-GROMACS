@@ -1,0 +1,26 @@
+[ atomtypes ]
+; name        mass      charge   ptype      sigma      epsilon
+opls_135     12.01100   0.000     A       3.50000e-01  2.76000e-01 ; CT - methyl carbon
+opls_140      1.00800   0.000     A       2.50000e-01  1.22000e-01 ; HC - hydrogen
+opls_233     12.01100   0.000     A       3.30000e-01  2.47000e-01 ; nitrile carbon (triple bond)
+opls_234     14.00674   0.000     A       3.25000e-01  1.06500e-01 ; nitrile nitrogen
+
+[ bondtypes ]
+; i          j          func    b0      kb
+opls_140   opls_140    1     0.151   265265.0
+opls_135   opls_140    1     0.109   284512.0
+opls_234   opls_233    1     0.115   798810.0
+opls_233   opls_135    1     0.146   310950.0
+
+[ angletypes ]
+; i          j          k          func    th0     cth
+opls_140   opls_135   opls_140    1   108.5   460.24
+opls_233   opls_135   opls_140    1   109.5   350.0
+opls_234   opls_233   opls_135    1   180.0   460.0
+
+[ dihedraltypes ]
+; i          j          k          l         func   phi0    cp     mult
+opls_234   opls_233   opls_135   opls_140    3   0.0  0.0  0.2  0.0  0.0  0.0
+opls_233   opls_135   opls_140   opls_140    3   0.0  0.0  0.2  0.0  0.0  0.0
+
+

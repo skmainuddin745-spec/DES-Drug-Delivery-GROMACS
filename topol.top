@@ -1,0 +1,38 @@
+; Include forcefield parameters
+#include "charmm36.itp"
+#include "charmm36l.itp"
+#include "charmm36m.itp"
+
+#include "IBU.itp"
+#ifdef POSRES
+#include "posre_IBU.itp"
+#endif
+
+#include "ACE.itp"
+#ifdef POSRES
+#include "posre_ACE.itp"
+#endif
+
+#include "spc216.itp"
+
+#include "MEN.itp"
+#ifdef POSRES
+#include "posre_MEN.itp"
+#endif
+
+#include "THY.itp"
+#ifdef POSRES
+#include "posre_THY.itp"
+#endif
+
+[ system ]
+; Name
+IBU-ACE_DES_water
+
+[ molecules ]
+; Compound	#mols
+IBU   	            5
+ACE		   30
+SOL               504
+MEN                56
+THY                56
